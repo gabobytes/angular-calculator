@@ -8,21 +8,21 @@
 	<meta charset="utf-8" />
 </head>
 <body ng-app="calculatorApp">
-<div class="container">
+<div class="container" ng-controller="ctrlCalculator">
 	<div class="bodyCalc">
 		<div class="row">
-			<div class="col s12"><input type="number"></div>	
+			<div class="col s12"><input type="number" ng-model="values" ng-init="values=0" value="0"></div>	
 		</div>	
 	</div>
 	<div class="row">
 		<div class="col s3">
-			<button class="btn" ng-model="seven" ng-init="seven=7">7</button>
+			<button class="btn" ng-model="seven" ng-init="seven=7" ng-click="concatenate(seven)">7</button>
 		</div>				
 		<div class="col s3">
-			<button class="btn" ng-model="eight" ng-init="eight=8">8</button>
+			<button class="btn" ng-model="eight" ng-init="eight=8" ng-click="concatenate(eight)">8</button>
 		</div>	
 		<div class="col s3">
-			<button class="btn" ng-model="nine" ng-init="nine=9">9</button>
+			<button class="btn" ng-model="nine" ng-init="nine=9" ng-click="concatenate(nine)">9</button>
 		</div>		
 		<div class="col s3">
 			<button class="btn" ng-model="division" ng-init="division='/'">/</button>
@@ -30,13 +30,13 @@
 	</div>
 	<div class="row">
 		<div class="col s3">
-			<button class="btn" ng-model="four" ng-init="four=4">4</button>
+			<button class="btn" ng-model="four" ng-init="four=4" ng-click="concatenate(four)">4</button>
 		</div>				
 		<div class="col s3">
-			<button class="btn" ng-model="five" ng-init="five=5">5</button>
+			<button class="btn" ng-model="five" ng-init="five=5" ng-click="concatenate(five)">5</button>
 		</div>	
 		<div class="col s3">
-			<button class="btn" ng-model="six" ng-init="six=6">6</button>
+			<button class="btn" ng-model="six" ng-init="six=6" ng-click="concatenate(six)">6</button>
 		</div>		
 		<div class="col s3">
 			<button class="btn" ng-model="mult" ng-init="mult='*'">*</button>
@@ -44,13 +44,13 @@
 	</div>	
 	<div class="row">
 		<div class="col s3">
-			<button class="btn" ng-model="one" ng-init="one=1">1</button>
+			<button class="btn" ng-model="one" ng-init="one=1" ng-click="concatenate(one)">1</button>
 		</div>				
 		<div class="col s3">
-			<button class="btn" ng-model="two" ng-init="two=2">2</button>
+			<button class="btn" ng-model="two" ng-init="two=2" ng-click="concatenate(two)">2</button>
 		</div>	
 		<div class="col s3">
-			<button class="btn" ng-model="three" ng-init="three=3">3</button>
+			<button class="btn" ng-model="three" ng-init="three=3" ng-click="concatenate(three)">3</button>
 		</div>		
 		<div class="col s3">
 			<button class="btn" ng-model='subs' ng-init="subs='-'">-</button>
@@ -61,7 +61,7 @@
 			<button class="btn" ng-model="coma" ng-init="coma=','">,</button>
 		</div>				
 		<div class="col s3">
-			<button class="btn" ng-model="zero" ng-init="zero=0">0</button>
+			<button class="btn" ng-model="zero" ng-init="zero=0" ng-click="concatenate(zero)">0</button>
 		</div>	
 		<div class="col s3">
 			<button class="btn" ng-model="equals">=</button>
@@ -75,5 +75,6 @@
 <script src="js/materialize.min.js"></script>
 <script src="js/angular.min.js"></script>
 <script src="js/myApp.js"></script>
+<script src="js/calculator.js"></script>
 </body>
 </html>
