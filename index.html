@@ -7,11 +7,12 @@
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	<meta charset="utf-8" />
 </head>
-<body ng-app="calculatorApp">
+<body ng-app="calculatorApp" ng-keypress="">
 <div class="container" ng-controller="ctrlCalculator">
+{{testing}}
 	<div class="bodyCalc">
 		<div class="row">
-			<div class="col s12"><input type="number" ng-model="values" ng-init="values=0" value="0"></div>	
+			<div class="col s12"><input type="text" ng-model="values" ng-init="values=0" value="0" readonly="true"></div>	
 		</div>	
 	</div>
 	<div class="row">
